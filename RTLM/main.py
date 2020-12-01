@@ -14,7 +14,7 @@ app = flask.Flask(__name__)
 def content():
     def inner():
     	while(1):
-    		con = str(tail("/var/log/syslog","1")) + '<br/>\n'
+    		con = str(tail("/var/log/syslog","10")) + '<br/>\n'
     		yield con
     		time.sleep(3)
     		del con
